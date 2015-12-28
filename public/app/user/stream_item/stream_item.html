@@ -1,0 +1,17 @@
+<div class="stream-item tweet paragraph-block">
+  <button type="button"
+          class="simple-btn remove pull-right"
+          title="Remove"
+          data-ng-click="vm.remove()"
+          data-ng-if="vm.isUserOwner"
+  >
+    <span class="glyphicon glyphicon-remove"></span>
+  </button>
+
+  <p class="tweet-header">
+    <a class="username" data-ng-href="{{::vm.tweetOwnerHref}}">@<span data-ng-bind="vm.tweet.userName"></span></a>
+    ·
+    <span class="time" data-ng-bind="vm.formattedDate"></span>
+  </p>
+  <p><pre class="no-styles" data-ng-bind="::vm.tweet.text"></pre></p>
+</div>

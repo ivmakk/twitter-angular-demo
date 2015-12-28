@@ -1,0 +1,147 @@
+html, body, #shell-wrap, #shell, #content {
+  height: 100%;
+}
+
+#header {
+  margin: 0;
+
+  > .container-fluid {
+    width: 1218px;
+  }
+}
+
+.full-page-model {
+  height: 100%;
+  background-color: #DDDDDD;
+
+  @separator-color: #CCCCCC;
+
+  .panel {
+    margin-top: 150px;
+
+    .panel-body {
+      padding: 30px;
+      position: relative;
+    }
+  }
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+#page-container {
+  margin: 0 auto;
+  width: 1220px;
+  padding: 15px;
+
+  .dashboard {
+    float: left;
+
+    &.dashboard-left, &.dashboard-right {
+      float: left;
+      width: 290px;
+    }
+  }
+
+  .main-column, #timeline {
+    width: 590px;
+    margin: 0 10px;
+    float: left;
+
+    .tweet-box {
+      padding: 15px;
+      background-color: #E5F2F7;
+
+      textarea {
+        resize: none;
+      }
+
+      .tweet-manage-panel {
+        margin-top: 10px;
+        float: right;
+        line-height: 34px;
+
+        .tweet-counter {
+          color: #8899a6;
+          padding: 0 3px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .stream {
+      .no-tweets {
+        padding: 15px;
+      }
+
+      .stream-item {
+        padding: 15px;
+
+        //& + .stream-item {
+          border-top: 1px solid #e1e8ed;
+        //}
+
+        > .remove {
+          font-size: 1em;
+        }
+
+        .tweet-header {
+          font-size: .85em;
+          color: #8899a6;
+
+          .username {
+            color: #8899a6;
+          }
+        }
+      }
+
+      .stream-item:not(:hover) {
+        > .remove {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.paragraph-block {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.simple-btn {
+  color: #000000;
+  opacity: 0.25;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 0 none;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover {
+    color: #000000;
+    cursor: pointer;
+    opacity: 0.5;
+    text-decoration: none;
+  }
+}
+
+pre.no-styles {
+  background: inherit;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.nav.nav-stacked {
+  .tab {
+    border: 1px solid #EDEDED;
+  }
+
+  .subtab {
+    padding-left: 30px;
+  }
+}

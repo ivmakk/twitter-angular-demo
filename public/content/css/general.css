@@ -1,0 +1,161 @@
+
+
+html,
+body,
+#shell-wrap,
+#shell,
+#content {
+  height: 100%;
+}
+#header {
+  margin: 0;
+}
+#header > .container-fluid {
+  width: 1218px;
+}
+.full-page-model {
+  height: 100%;
+  background-color: #DDDDDD;
+}
+.full-page-model .panel {
+  margin-top: 150px;
+}
+.full-page-model .panel .panel-body {
+  padding: 30px;
+  position: relative;
+}
+.no-margin-top {
+  margin-top: 0;
+}
+#page-container {
+  margin: 0 auto;
+  width: 1220px;
+  padding: 15px;
+}
+#page-container .dashboard {
+  float: left;
+}
+#page-container .dashboard.dashboard-left,
+#page-container .dashboard.dashboard-right {
+  float: left;
+  width: 290px;
+}
+#page-container .main-column,
+#page-container #timeline {
+  width: 590px;
+  margin: 0 10px;
+  float: left;
+}
+#page-container .main-column .tweet-box,
+#page-container #timeline .tweet-box {
+  padding: 15px;
+  background-color: #E5F2F7;
+}
+#page-container .main-column .tweet-box textarea,
+#page-container #timeline .tweet-box textarea {
+  resize: none;
+}
+#page-container .main-column .tweet-box .tweet-manage-panel,
+#page-container #timeline .tweet-box .tweet-manage-panel {
+  margin-top: 10px;
+  float: right;
+  line-height: 34px;
+}
+#page-container .main-column .tweet-box .tweet-manage-panel .tweet-counter,
+#page-container #timeline .tweet-box .tweet-manage-panel .tweet-counter {
+  color: #8899a6;
+  padding: 0 3px;
+  margin-right: 5px;
+}
+#page-container .main-column .stream .no-tweets,
+#page-container #timeline .stream .no-tweets {
+  padding: 15px;
+}
+#page-container .main-column .stream .stream-item,
+#page-container #timeline .stream .stream-item {
+  padding: 15px;
+  border-top: 1px solid #e1e8ed;
+}
+#page-container .main-column .stream .stream-item > .remove,
+#page-container #timeline .stream .stream-item > .remove {
+  font-size: 1em;
+}
+#page-container .main-column .stream .stream-item .tweet-header,
+#page-container #timeline .stream .stream-item .tweet-header {
+  font-size: .85em;
+  color: #8899a6;
+}
+#page-container .main-column .stream .stream-item .tweet-header .username,
+#page-container #timeline .stream .stream-item .tweet-header .username {
+  color: #8899a6;
+}
+#page-container .main-column .stream .stream-item:not(:hover) > .remove,
+#page-container #timeline .stream .stream-item:not(:hover) > .remove {
+  display: none;
+}
+.paragraph-block p:last-child {
+  margin-bottom: 0;
+}
+.simple-btn {
+  color: #000000;
+  opacity: 0.25;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 0 none;
+  cursor: pointer;
+  padding: 0;
+}
+.simple-btn:hover {
+  color: #000000;
+  cursor: pointer;
+  opacity: 0.5;
+  text-decoration: none;
+}
+pre.no-styles {
+  background: inherit;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+.nav.nav-stacked .tab {
+  border: 1px solid #EDEDED;
+}
+.nav.nav-stacked .subtab {
+  padding-left: 30px;
+}
+
+.loading-block-mask {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.loading-block-mask .animation-image {
+  margin-top: -16px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+}
+
+
+#user-view {
+  background-color: #F5F8FA;
+  min-height: 100%;
+}
+#user-view .user-info td {
+  padding: 3px;
+}
+#user-view .user-info td:first-child {
+  text-align: center;
+  width: 1%;
+}
+#user-view #page-container #timeline > .panel > .panel-body {
+  padding: 0;
+}

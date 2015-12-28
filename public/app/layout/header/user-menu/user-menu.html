@@ -1,0 +1,22 @@
+<ul class="nav navbar-nav navbar-right" data-ng-if="vm.isUserAuthorized()">
+  <li>
+    <div data-notification-indicator></div>
+  </li>
+
+  <li class="dropdown">
+    <a class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" href="#">
+      <span class="glyphicon glyphicon-user"></span> <span data-ng-bind="vm.user.email"></span> <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-user-menu">
+      <li>
+        <a data-ng-href="{{::vm.links.admin}}" class="no-icon">Admin</a>
+      </li>
+      <li>
+        <a data-ng-href="{{::vm.links.settings}}" class="no-icon">Settings</a>
+      </li>
+      <li>
+        <a href="#" data-ng-click="vm.logout()"><span class="fa fa-sign-out menu-item-icon"></span>Logout</a>
+      </li>
+    </ul>
+  </li>
+</ul>

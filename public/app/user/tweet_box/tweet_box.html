@@ -1,0 +1,17 @@
+<div class="tweet-box clearfix">
+  <textarea data-msd-elastic
+             class="form-control"
+             rows="1"
+             placeholder="What's happening?"
+             data-ng-model="vm.tweetText"
+             data-ng-focus="vm.onFocus()"
+             data-ng-blur="vm.onBlur()"
+  ></textarea>
+
+  <div class="tweet-manage-panel" data-ng-show="vm.isFocused || vm.tweetText.length">
+    <span class="tweet-counter" data-ng-bind="140 - vm.tweetText.length"></span>
+    <button class="btn btn-primary pull-right" data-ng-click="vm.tweet()">
+      <span class="glyphicon glyphicon-edit"></span> Tweet
+    </button>
+  </div>
+</div>

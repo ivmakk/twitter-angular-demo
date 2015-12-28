@@ -1,0 +1,88 @@
+<section id="register-view" class="content-section-offset full-page-model">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-md-offset-3 col-lg-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h2 class="text-center no-margin-top">Register</h2>
+
+          <div data-ng-show="vm.errorMsg" class="alert alert-danger ng-hide" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign"></span>
+            <span data-ng-bind="vm.errorMsg"></span>
+          </div>
+
+          <form name="vm.registerForm" data-ng-submit="vm.register()">
+            <div class="form-group"
+                 data-ng-class="{'has-error': vm.registerForm.email.$invalid && vm.registerForm.email.$dirty && vm.registerForm.email.$touched}"
+                    >
+              <label class="control-label" for="email">Email address</label>
+              <input name="email"
+                     type="email"
+                     class="form-control"
+                     id="email"
+                     placeholder="Email"
+                     required
+                     ng-model="vm.formData.email"
+                      >
+            </div>Ф
+            <div class="form-group"
+                 data-ng-class="{'has-error': vm.registerForm.name.$invalid && vm.registerForm.name.$dirty && vm.registerForm.name.$touched}"
+                    >
+              <label class="control-label" for="name">Name</label>
+              <input name="name"
+                     type="text"
+                     class="form-control"
+                     id="name"
+                     placeholder="Name"
+                     data-ng-minlength="3"
+                     required
+                     ng-model="vm.formData.name"
+              >
+            </div>
+            <div class="form-group"
+                 data-ng-class="{
+                    'has-error': vm.registerForm.password.$invalid &&
+                                 vm.registerForm.password.$dirty &&
+                                 vm.registerForm.password.$touched
+
+                    }"
+                 >
+              <label class="control-label" for="password">Password</label>
+              <input name="password"
+                     type="password"
+                     class="form-control"
+                     id="password"
+                     placeholder="Password"
+                     required
+                     ng-model="vm.formData.password"
+              >
+            </div>
+            <div class="form-group"
+                 data-ng-class="{
+                    'has-error': vm.registerForm['confirm-password'].$invalid &&
+                                 vm.registerForm['confirm-password'].$dirty &&
+                                 vm.registerForm['confirm-password'].$touched
+                     }"
+                 >
+              <label class="control-label" for="confirm-password">Confirm password</label>
+              <input name="confirm-password"
+                     type="password"
+                     class="form-control"
+                     id="confirm-password"
+                     placeholder="Confirm password"
+                     required
+                     ng-model="vm.formData.confirmPassword"
+                     ng-keyup="vm.validPassword()"
+              >
+            </div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-primary btn-block" data-ng-disabled="!vm.registerForm.$valid">
+                Register <span class="fa fa-sign-in"></span>
+              </button>
+            </div>
+          </form>
+          <div data-loading-block data-show="vm.showLoading"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

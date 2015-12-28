@@ -1,0 +1,54 @@
+<section id="admin-view" class="content-section-offset">
+  <div id="page-container" class="clearfix">
+    <div class="dashboard dashboard-left">
+      <ul class="nav nav-pills nav-stacked">
+        <li role="presentation" class="active"><a href="#">Users</a></li>
+      </ul>
+    </div>
+
+    <div class="main-column">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div data-ng-show="vm.errorMsg" class="alert alert-danger ng-hide" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign"></span>
+            <span data-ng-bind="vm.errorMsg"></span>
+          </div>
+
+          <table class="table table-bordered users-list">
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Manage</th>
+            </tr>
+            <tr data-ng-repeat="user in vm.users">
+              <td data-ng-bind="user.id"></td>
+              <td>
+                <a data-ng-href="{{vm.$state.href('user', {userName: user.name})}}" data-ng-bind="user.name"></a>
+              </td>
+              <td data-ng-bind="user.email"></td>
+              <td>
+                <a class="btn btn-default btn-xs"
+                   title="Edit"
+                   data-ng-href="{{vm.$state.href('admin edit account', {id: user.id})}}"
+                ><span class="fa fa-pencil"></span></a>
+                <button class="btn btn-default btn-xs"
+                        title="Remove"
+                        data-ng-click="vm.remove(user.id)"
+                ><span class="fa fa-trash"></span></button>
+              </td>
+            </tr>
+          </table>
+
+          <div>
+            <a data-ng-href="{{::vm.createUserHref}}" class="btn btn-success pull-right">
+              <span class="glyphicon glyphicon-plus"></span> Create user
+            </a>
+          </div>
+
+          <div data-loading-block data-show="vm.showLoading"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

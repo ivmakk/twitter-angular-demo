@@ -1,0 +1,48 @@
+<section id="user-view" class="content-section-offset">
+  <div id="page-container" class="clearfix">
+    <div class="dashboard dashboard-left">
+      <div class="panel panel-default">
+        <div class="panel-body paragraph-block ng-hide" data-ng-show="vm.timelineOwner">
+          <table class="user-info">
+            <tr>
+              <td><span class="fa fa-user" title="Name"></span></td>
+              <td>@<span data-ng-bind="vm.timelineOwner.name"></span></td>
+            </tr>
+            <tr>
+              <td><span class="fa fa-envelope-o" title="Email"></span></td>
+              <td><span data-ng-bind="vm.timelineOwner.email"></td>
+            </tr>
+            <tr>
+              <td><span class="fa fa-users" title="Followers"></span></td>
+              <td><span data-ng-bind="vm.followers"></span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="timeline">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div data-tweet-box data-create-tweet="vm.tweets.create" data-ng-if="::vm.isCurrentUserOwner"></div>
+
+          <div class="stream">
+            <div data-ng-repeat="tweet in vm.tweets.data" data-stream-item data-tweet="tweet"></div>
+            <div class="no-tweets" data-ng-hide="vm.tweets.data.length">No tweets.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard dashboard-right ng-hide" data-ng-show="!vm.isCurrentUserOwner && vm.timelineOwner">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <button class="btn btn-success" data-ng-click="vm.follow()" data-ng-hide="vm.isUserSubsribed">
+            <span class="glyphicon glyphicon-plus"></span> Follow user
+          </button>
+          <button class="btn btn-primary" data-ng-click="vm.unfollow()" data-ng-show="vm.isUserSubsribed">
+            <span class="glyphicon glyphicon-minus"></span> Unfollow user
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

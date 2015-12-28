@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title ng-bind="title">Distiller</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <base href="/">
+  <link rel="stylesheet" href="vendor/bower_components/components-font-awesome/css/font-awesome.min.css">
+  <!-- injector:css -->
+  <link rel="stylesheet" href="vendor/bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="vendor/bower_components/bootstrap-table/dist/bootstrap-table.css">
+  <link rel="stylesheet" href="content/css/general.css">
+  <!-- endinjector -->
+</head>
+<body>
+<div ng-include="'app/layout/shell.html'" id="shell-wrap"></div>
+
+<!-- injector:bower:js -->
+<script src="vendor/bower_components/jquery/dist/jquery.js"></script>
+<script src="vendor/bower_components/angular/angular.js"></script>
+<script src="vendor/bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="vendor/bower_components/angular-elastic/elastic.js"></script>
+<script src="vendor/bower_components/angular-resource/angular-resource.js"></script>
+<script src="vendor/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="vendor/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="vendor/bower_components/bootstrap-table/src/bootstrap-table.js"></script>
+<script src="vendor/bower_components/moment/moment.js"></script>
+<script src="vendor/bower_components/underscore/underscore.js"></script>
+<!-- endinjector -->
+<!-- injector:js -->
+<script src="app/app.module.js"></script>
+<script src="app/admin/admin.module.js"></script>
+<script src="app/admin/create_user/create_user.module.js"></script>
+<script src="app/admin/edit_account/edit_account.module.js"></script>
+<script src="app/blocks/rest_api/rest_api.module.js"></script>
+<script src="app/blocks/router/router.module.js"></script>
+<script src="app/blocks/user/user.module.js"></script>
+<script src="app/core/core.module.js"></script>
+<script src="app/core/data_models/data_models.module.js"></script>
+<script src="app/layout/layout.module.js"></script>
+<script src="app/login/login.module.js"></script>
+<script src="app/register/register.module.js"></script>
+<script src="app/settings/settings.module.js"></script>
+<script src="app/user/user.module.js"></script>
+<script src="app/core/core.config.js"></script>
+<script src="app/admin/admin.controller.js"></script>
+<script src="app/admin/admin.route.js"></script>
+<script src="app/admin/create_user/create_user.controller.js"></script>
+<script src="app/admin/create_user/create_user.route.js"></script>
+<script src="app/admin/edit_account/edit_account.controller.js"></script>
+<script src="app/admin/edit_account/edit_account.route.js"></script>
+<script src="app/blocks/rest_api/rest_api.js"></script>
+<script src="app/blocks/router/router-helper.provider.js"></script>
+<script src="app/blocks/user/user.js"></script>
+<script src="app/core/constants.js"></script>
+<script src="app/core/core.route.js"></script>
+<script src="app/core/data_models/tweets.service.js"></script>
+<script src="app/layout/account_info/account_info.directive.js"></script>
+<script src="app/layout/header/header.directive.js"></script>
+<script src="app/layout/header/user-menu/user-menu.directive.js"></script>
+<script src="app/layout/loading_block/loading_block.directive.js"></script>
+<script src="app/layout/shell.controller.js"></script>
+<script src="app/login/login.controller.js"></script>
+<script src="app/login/login.route.js"></script>
+<script src="app/register/register.controller.js"></script>
+<script src="app/register/register.route.js"></script>
+<script src="app/settings/settings.controller.js"></script>
+<script src="app/settings/settings.route.js"></script>
+<script src="app/user/stream_item/stream_item.directive.js"></script>
+<script src="app/user/tweet_box/tweet_box.directive.js"></script>
+<script src="app/user/user.controller.js"></script>
+<script src="app/user/user.route.js"></script>
+<!-- endinjector -->
+</body>
+</html>

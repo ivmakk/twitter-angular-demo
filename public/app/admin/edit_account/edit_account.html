@@ -1,0 +1,16 @@
+<section id="admin-edit-account-view" class="content-section-offset">
+  <div id="page-container" class="clearfix">
+    <div class="dashboard dashboard-left">
+      <ul class="nav nav-pills nav-stacked">
+        <li role="presentation"><a class="tab" data-ng-href="{{::vm.adminHref}}">Users</a></li>
+        <li role="presentation" class="active subtab">
+          <a href="#">Edit user: <span data-ng-bind="vm.userData.name"></span></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-column">
+      <div data-account-info data-user-data="vm.userData" data-save-fn="vm.saveFn"></div>
+    </div>
+  </div>
+</section>
